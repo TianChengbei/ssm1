@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 切入点 -->
+    <bean id = "person" class="com.tian.spring.aop.spring.service.impl.PersonImpl"></bean>
+    <bean id = "nomal" class="com.tian.spring.aop.spring.service.impl.NomalPersonImpl"></bean>
+    <!-- 切面   -->
+    <bean id="before" class="com.tian.spring.aop.spring.service.impl.XsBeforeAdvice"></bean>
+
+    <bean id="classFilter" class="com.tian.spring.aop.spring.advisor.MyClassFilter"></bean>
+    <bean id="methodMatcher" class="com.tian.spring.aop.spring.advisor.MyMethodMatcher"></bean>
+    <bean id="pointCut" class="com.tian.spring.aop.spring.advisor.MyPointCut">
+        <property name="classFilter" ref="classFilter"></property>
+        <property name="methodMatcher" ref="methodMatcher"></property>
+    </bean>
+    <bean id="myAdvisor" class="com.tian.spring.aop.spring.advisor.MyPointcutAdvisor">
+        <property name="pointcut" ref="pointCut"></property>
+        <property name="advice" ref="before"></property>
+    </bean>
+
+
+    <!--  代理  -->
+    <bean id="personProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="person"/>
+        <property name="interceptorNames">
+            <array>
+                <value>myAdvisor</value>
+            </array>
+        </property>
+    </bean>
+
+</beans>
