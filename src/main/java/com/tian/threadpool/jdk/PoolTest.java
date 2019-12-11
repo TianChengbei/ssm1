@@ -51,7 +51,7 @@ public class PoolTest {
         Map<String,Object> map = new HashMap<>();
         map.put("13","1333");
         map.put("14","1444");
-        map.forEach((key,value) -> System.out.println(key+value));
+//        map.forEach((key,value) -> System.out.println(key+value));
 
         return 1;
 

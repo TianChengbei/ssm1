@@ -16,7 +16,7 @@ public class Solution_18 {
         int[] nums = {0,0,0,0};
         int target = 0;
         List<List<Integer>> lists = so.fourSum(nums, target);
-        lists.stream().forEach(list -> System.out.println(list.toString()));
+//        lists.stream().forEach(list -> System.out.println(list.toString()));
     }
 
     public List<List<Integer>> fourSum(int[] nums, int target) {

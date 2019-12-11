@@ -1,5 +1,6 @@
 package com.tian.test;
 
+
 import java.util.Optional;
 
 /**
@@ -21,6 +22,7 @@ public class OptionalTest {
     }
 
     public static String getGender1(String student) {
+//        return null;
         return Optional.ofNullable(student).map(u -> u.length()+"").orElse("Unkown");
     }
 

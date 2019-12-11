@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author tianchengbei
@@ -24,14 +23,14 @@ public class TestDistinct {
         list.add(user2);
         list.add(user3);
 
-        List<User> collect = list.stream().distinct().collect(Collectors.toList());
-        System.out.println(collect);
-        HashMap<User,Object> map = new HashMap<>();
-        map.put(user1,"user1");
-        map.put(user2,"user2");
-        HashSet<User> set = new HashSet<>();
-        set.add(user1);
-        set.add(user2);
+//        List<Object> collect = list.stream().distinct().collect(Collectors.toList());
+//        System.out.println(collect);
+//        HashMap<User,Object> map = new HashMap<>();
+//        map.put(user1,"user1");
+//        map.put(user2,"user2");
+//        HashSet<User> set = new HashSet<>();
+//        set.add(user1);
+//        set.add(user2);
 
 
     }
