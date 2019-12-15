@@ -3,6 +3,7 @@ package com.tian.spring.proxy;
 import com.tian.spring.aop.spring.service.Person;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.rmi.registry.Registry;
 
 /**
  * @author tianchengbei
@@ -18,8 +19,8 @@ public class PersonProxy implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("打印日志。。。。。。。。start");
         //执行被代理类的方法
-        method.invoke(person,args);
+        Object returnObj = method.invoke(person, args);
         System.out.println("打印日志。。。。。。。。end");
-        return null;
+        return returnObj;
     }
 }

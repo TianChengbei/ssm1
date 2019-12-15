@@ -14,7 +14,8 @@ public class TestPoxy {
         Person p = new PersonImpl();
         PersonProxy pp = new PersonProxy(p);
         Person proxy = (Person) Proxy.newProxyInstance(p.getClass().getClassLoader(), p.getClass().getInterfaces(), pp);
-        proxy.eat();
+        Integer sx = proxy.sx(34);
+        System.out.println(sx);
     }
 
 }

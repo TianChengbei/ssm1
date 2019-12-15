@@ -1,5 +1,6 @@
 package com.tian.test;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -12,7 +13,11 @@ public class TestRentrenlock {
     public static void main(String[] args) {
         ReentrantLock lock = new ReentrantLock();
         lock.lock();
+        lock.tryLock();
         lock.unlock();
+        Condition condition = lock.newCondition();
+        condition.signal();
+//        condition.await();
         ReentrantReadWriteLock rwlock = new ReentrantReadWriteLock();
         rwlock.readLock();
     }

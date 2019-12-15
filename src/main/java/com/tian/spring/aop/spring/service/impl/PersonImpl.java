@@ -20,4 +20,10 @@ public class PersonImpl implements Person {
     public void wc() {
         System.out.println("上厕所。。。。");
     }
+
+    @Override
+    public Integer sx(Integer a) {
+        System.out.println("上学。。。。");
+        return a;
+    }
 }

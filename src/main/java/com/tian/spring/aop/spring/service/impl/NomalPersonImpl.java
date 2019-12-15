@@ -16,4 +16,9 @@ public class NomalPersonImpl implements Person {
     public void wc() {
         System.out.println("平常人上厕所。。。。");
     }
+
+    @Override
+    public Integer sx(Integer a) {
+        return null;
+    }
 }

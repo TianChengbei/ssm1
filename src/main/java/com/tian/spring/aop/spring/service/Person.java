@@ -9,4 +9,6 @@ public interface Person {
     void eat();
     void wc();
 
+    Integer sx(Integer a);
+
 }
