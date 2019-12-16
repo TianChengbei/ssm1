@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
 import javax.sound.midi.Soundbank;
 
 /**
@@ -37,9 +38,13 @@ public class TestCollection {
         System.out.println("ssss");
         HashMap<String,Object> hashMap = new HashMap<>();
         hashMap.put("name","tianchengbei");
+        hashMap.put("name","wan");
         hashMap.get("");
+        ConcurrentHashMap<String,Object> ch = new ConcurrentHashMap<>();
+        ch.put("","");
+        ch.get("");
         System.out.println(15 >> 1);
-
+        System.out.println(16>>>1);
         int b =a ;
     }
 
