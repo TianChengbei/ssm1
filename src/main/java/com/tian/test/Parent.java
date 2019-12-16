@@ -33,6 +33,11 @@ class Son extends Parent{
         System.out.println("gggg"+j);
         return j;
     }
+
+    public void tt(){
+
+    }
+
 }
 
 class Test{
