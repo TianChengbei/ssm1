@@ -1,6 +1,10 @@
 package com.tian.spring.jdbc;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.TransactionTemplate;
 
 /**
  * @author tianchengbei
@@ -10,7 +14,10 @@ public class Test {
 
     public static void main(String[] args) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
-
+        PlatformTransactionManager platformTransactionManager = null;
+        TransactionDefinition transactionDefinition = null;
+        TransactionStatus transactionStatus = null;
+        TransactionTemplate transactionTemplate = null;
     }
 
 }
