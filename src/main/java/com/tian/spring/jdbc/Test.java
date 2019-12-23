@@ -1,5 +1,6 @@
 package com.tian.spring.jdbc;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
@@ -18,6 +19,8 @@ public class Test {
         TransactionDefinition transactionDefinition = null;
         TransactionStatus transactionStatus = null;
         TransactionTemplate transactionTemplate = null;
+        AtomicInteger atomicInteger = new AtomicInteger(12);
+        atomicInteger.get();
     }
 
 }

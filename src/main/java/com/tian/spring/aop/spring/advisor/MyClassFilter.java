@@ -1,6 +1,5 @@
 package com.tian.spring.aop.spring.advisor;
 
-import com.tian.spring.aop.spring.service.Person;
 import com.tian.spring.aop.spring.service.impl.PersonImpl;
 import org.springframework.aop.ClassFilter;
 
