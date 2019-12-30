@@ -34,6 +34,11 @@ public class Test {
         PhantomReference<Test> phantomReference = new PhantomReference<>(test, referenceQueue);
     }
 
+    public static void testStrongRefence(){
+        System.out.println("强引用。。。。。。。");
+        Test test = new Test();
+    }
+
     public static void testSoftReferen() {
         System.out.println("软引用。。。。。。。");
         Test test = new Test();

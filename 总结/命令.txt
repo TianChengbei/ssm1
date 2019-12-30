@@ -1,0 +1,20 @@
+".bash_profile" [New File]
+export MVN_HOME=/Users/tianchengbei/soft/apache-maven-3.6.2
+export MVN_HOME=/Users/tianchengbei/soft/apache-maven-3.6.2
+Last login: Mon Sep  9 16:14:30 on ttys001
+tianchengbeideMacBook-Pro:~ tianchengbei$ ls
+Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		soft		word
+tianchengbeideMacBook-Pro:~ tianchengbei$ cd
+tianchengbeideMacBook-Pro:~ tianchengbei$ vim .bash_profile
+tianchengbeideMacBook-Pro:~ tianchengbei$ source .bash_profile
+tianchengbeideMacBook-Pro:~ tianchengbei$ ls
+Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		soft		word
+tianchengbeideMacBook-Pro:~ tianchengbei$ mvn
+[INFO] Scanning for projects...
+
+
+
+
+sudo su     转换成超级用户
+vi hello       打开文件 ：wq 即可保存退出
+wq! 强制保存退出
