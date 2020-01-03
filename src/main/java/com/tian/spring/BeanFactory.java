@@ -1,6 +1,7 @@
 package com.tian.spring;
 
 import com.tian.spring.model.BeanScope;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -8,10 +9,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.FilterType;
-import sun.jvm.hotspot.memory.SystemDictionary;
 
 /**
  * @author tianchengbei
