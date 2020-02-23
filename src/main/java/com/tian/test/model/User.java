@@ -1,5 +1,7 @@
 package com.tian.test.model;
 
+import com.tian.test.PP;
+
 /**
  * @author tianchengbei
  * @since 2019-12-04
@@ -8,8 +10,12 @@ public class User {
     private Long id;
     private String name;
     private Integer age;
-
+    String st = "dfd";
     public User() {
+    }
+
+    public static void main(String[] args) {
+        PP p = new PP();
     }
 
     public User(Long id, String name, Integer age) {

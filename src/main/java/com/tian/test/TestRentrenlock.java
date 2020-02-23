@@ -10,14 +10,14 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  */
 public class TestRentrenlock {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ReentrantLock lock = new ReentrantLock();
         lock.lock();
         lock.tryLock();
         lock.unlock();
         Condition condition = lock.newCondition();
         condition.signal();
-//        condition.await();
+        condition.await();
         ReentrantReadWriteLock rwlock = new ReentrantReadWriteLock();
         rwlock.readLock();
     }

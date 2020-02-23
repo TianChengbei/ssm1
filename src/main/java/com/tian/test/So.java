@@ -24,6 +24,8 @@ public class So {
     }
 
     public int say(String name,String pwd){
+        PP p = new PP();
+
         return 1;
     }
 

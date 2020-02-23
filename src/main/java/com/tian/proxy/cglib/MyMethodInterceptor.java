@@ -11,8 +11,11 @@ import net.sf.cglib.proxy.MethodProxy;
 public class MyMethodInterceptor implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-        System.out.println("before:"+method);
-        Object returnObject = methodProxy.invokeSuper(o, objects);
+        System.out.println("before:"+method.getDeclaringClass());
+        Object returnObject = null;
+        if(!method.getDeclaringClass().isInterface()){
+             returnObject = methodProxy.invokeSuper(o, objects);
+        }
         System.out.println("after:"+method);
         return returnObject;
     }

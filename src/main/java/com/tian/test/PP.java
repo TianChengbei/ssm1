@@ -1,5 +1,9 @@
 package com.tian.test;
 
+import com.tian.test.model.User;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -10,10 +14,15 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  */
 public class PP {
 
-    public static void main(String[] args) {
+     String ss = "fdfd";
+
+    public static void main(String[] args) throws SQLException {
         ReentrantLock lock = new ReentrantLock();
         lock.lock();
         lock.unlock();
+        User user = new User();
+        DriverManager.getConnection(null    );
+
     }
 
 }

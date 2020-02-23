@@ -13,6 +13,7 @@ public class TestP {
         Method say = tp.getClass().getMethod("say", Integer.class);
         Object invoke = say.invoke(tp, 34);
         System.out.println(invoke);
+        Object a  = new Object();
     }
 
     public int say(Integer a){
